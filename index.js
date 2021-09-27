@@ -9,7 +9,7 @@ const output = document.querySelector("#output");
 function calProfitAndLoss(iP, qty, cP) {
     if(iP > cP) {
         var loss = (iP - cP) * qty;
-        var percentageLoss = (loss/iP) * 100;
+        var percentageLoss = (loss/iP);
         var pL = percentageLoss.toFixed(2)
         // output
         output.innerText = "Loss:" + loss +  "   Percentage Loss: " + pL + "%"
@@ -17,9 +17,9 @@ function calProfitAndLoss(iP, qty, cP) {
         container.style.backgroundColor = "#EF4444";
         header.style.backgroundColor= "#991B1B"
 
-    } else if(cP > iP){
+    } else if(iP < cP){
         var profit = (cP - iP) * qty;
-        var percentageProfit = (profit/iP) * 100;
+        var percentageProfit = (profit/iP);
         var pP = percentageProfit.toFixed(2)
         // output
         output.innerText = "Profit:" + profit +  "    Percentage Profit: " + pP + "%"
