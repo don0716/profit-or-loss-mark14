@@ -12,7 +12,8 @@ body {
 
 button {
     display: block;
-    margin: auto
+    margin: auto;
+    cursor: pointer;
 }
 
 input {
